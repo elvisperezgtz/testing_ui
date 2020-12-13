@@ -1,7 +1,7 @@
 # **Automation demo**
 This is an automation demo project, where I'm showing my continuous learning about the Serenity BDD framework and the screenplay pattern.
 I'll like to share all these bits of knowledge.
-## Stack Tecnológico  
+## Stack   
 This automation has the following technologies:
 - Java  
 - Selenium  

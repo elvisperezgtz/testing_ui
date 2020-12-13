@@ -3,15 +3,11 @@ package com.qarmy.certification.task;
 import com.qarmy.certification.interactions.Highlight;
 import com.qarmy.certification.models.User;
 import com.qarmy.certification.userinterfaces.RegisterUI;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.thucydides.core.annotations.Step;
-
-import java.time.Duration;
 
 import static java.time.Duration.ofSeconds;
 

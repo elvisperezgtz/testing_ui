@@ -3,15 +3,12 @@ package com.qarmy.certification.stepdefinitions;
 import com.qarmy.certification.interactions.Close;
 import com.qarmy.certification.interactions.Highlight;
 import com.qarmy.certification.models.User;
-import com.qarmy.certification.task.Fill;
-import com.qarmy.certification.userinterfaces.RegisterUI;
+import com.qarmy.certification.task.SignUp;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -34,6 +31,7 @@ public class SignupStepDefinitions {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Rocco");
     }
+
     @Given("^He is on PHP Travels website$")
     public void heIsOnPHPTravelsWebsite() {
        theActorInTheSpotlight().can(BrowseTheWeb.with(driver));
@@ -42,17 +40,13 @@ public class SignupStepDefinitions {
 
 
     }
+
     @When("^He signs up on PHP travels website$")
     public void heSignsUpOnPHPTravelsWebsite(List<User> users) {
         theActorInTheSpotlight().attemptsTo(
-                Fill.theForm(users.get(0)),
-                MoveMouse.to(RegisterUI.SIGN_UP),
-                Click.on(RegisterUI.SIGN_UP)
+             SignUp.inPhpTravels(users.get(0))
         );
-
     }
-
-
 
     @Then("^He should be able to see the text (.*)$")
     public void heShouldBeAbleToSeeTheTextGreeting(String greeting) {

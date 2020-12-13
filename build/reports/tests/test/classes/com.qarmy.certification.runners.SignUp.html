@@ -86,9 +86,63 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-1 Scenarios (?[32m1 passed?[0m)
-3 Steps (?[32m3 passed?[0m)
-0m23.664s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/sign_up.feature:18 ?[0m# Sign up successful
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[32m2 passed?[0m)
+0m21.462s
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3[contains(.,'Hi, Elvis Perez')]&quot;}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-A9F551T', ip: '192.168.0.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Elvis\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1d0fc8105a7675aa7245dccf2df8a69e
+*** Element info: {Using=xpath, value=//h3[contains(.,'Hi, Elvis Perez')]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
+	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getText(WebElementFacadeImpl.java:1118)
+	at net.serenitybdd.screenplay.ensure.web.TargetEnsure$textValueOf$1.invoke(TargetEnsure.kt:123)
+	at net.serenitybdd.screenplay.ensure.web.TargetEnsure$textValueOf$1.invoke(TargetEnsure.kt:10)
+	at net.serenitybdd.screenplay.ensure.ComparableEnsure$IS_EQUAL_TO_USING_COMPARATORS$1.invoke(ComparableEnsure.kt:111)
+	at net.serenitybdd.screenplay.ensure.ComparableEnsure$IS_EQUAL_TO_USING_COMPARATORS$1.invoke(ComparableEnsure.kt:11)
+	at net.serenitybdd.screenplay.ensure.Expectation.apply(Expectation.kt:53)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:18)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$QOAGViMH.performAs$accessor$2GBYwruG(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$QOAGViMH.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at com.qarmy.certification.stepdefinitions.SignupStepDefinitions.heShouldBeAbleToSeeTheTextGreeting(SignupStepDefinitions.java:61)
+	at ?.He should be able to see the text Hi, Elvis Perez(src/test/resources/features/sign_up.feature:15)
 
 </pre>
 </span>
@@ -96,7 +150,7 @@
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+<pre>[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[96m
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -112,7 +166,7 @@
  Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
-
+?[0m
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Sign up
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
@@ -136,7 +190,7 @@ TEST STARTED: Sign up successful
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at Dec 13, 2020, 3:02:06 AM</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at Dec 13, 2020, 4:44:58 AM</p>
 </div>
 </div>
 </body>
