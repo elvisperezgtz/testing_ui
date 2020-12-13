@@ -1,0 +1,12 @@
+com/qarmy/certification/models/User.java
+ com.qarmy.certification.models.User
+com/qarmy/certification/userinterfaces/RegisterUI.java
+ com.qarmy.certification.userinterfaces.RegisterUI
+com/qarmy/certification/userinterfaces/UserHomePageUI.java
+ com.qarmy.certification.userinterfaces.UserHomePageUI
+com/qarmy/certification/interactions/Close.java
+ com.qarmy.certification.interactions.Close
+com/qarmy/certification/interactions/Highlight.java
+ com.qarmy.certification.interactions.Highlight
+com/qarmy/certification/task/Fill.java
+ com.qarmy.certification.task.Fill
